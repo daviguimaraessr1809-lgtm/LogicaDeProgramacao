@@ -1,0 +1,25 @@
+Exercício 2 portfólio 2 
+
+algoritmo "TabuadaComPara"
+
+var
+   numero, i, resultado : inteiro
+
+inicio
+
+   escreva("Digite um número inteiro positivo para ver a tabuada: ")
+   leia(numero)
+   
+   escreval("--------------------------------")
+   escreval("       TABUADA DO ", numero)
+   escreval("--------------------------------")
+   
+
+   para i de 1 ate 10 faca
+      resultado <- numero * i
+      escreval(numero, " x ", i, " = ", resultado)
+   fimpara
+   
+   escreval("--------------------------------")
+
+fimalgoritmo
