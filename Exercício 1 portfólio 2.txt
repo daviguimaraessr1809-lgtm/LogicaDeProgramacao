@@ -1,0 +1,57 @@
+Exercício 1 portfólio 2
+
+
+
+
+algoritmo "Calculadora_Basica"
+
+var
+   numero1, numero2, resultado : real
+   opcao : inteiro
+
+inicio
+   
+   escreva("Digite o primeiro número: ")
+   leia(numero1)
+   
+   escreva("Digite o segundo número: ")
+   leia(numero2)
+   
+ 
+   escreval()
+   escreval("--- MENU DE OPERAÇÕES ---")
+   escreval("1 - Soma")
+   escreval("2 - Subtração")
+   escreval("3 - Multiplicação")
+   escreval("4 - Divisão")
+   escreva("Escolha a operação desejada (1-4): ")
+   leia(opcao)
+   
+   escreval("-------------------------")
+  
+  
+   escolha opcao
+      caso 1
+         resultado <- numero1 + numero2
+         escreval("Resultado da Soma: ", resultado)
+      caso 2
+         resultado <- numero1 - numero2
+         escreval("Resultado da Subtração: ", resultado)
+      caso 3
+         resultado <- numero1 * numero2
+         escreval("Resultado da Multiplicação: ", resultado)
+      caso 4
+         
+         se numero2 = 0 entao
+            escreval("Erro: Não é possível dividir por zero!")
+         senao
+            resultado <- numero1 / numero2
+            escreval("Resultado da Divisão: ", resultado)
+         fimse
+      outrocaso
+         escreval("Opção inválida! Por favor, escolha um número de 1 a 4.")
+   fimescolha
+
+   escreval("-------------------------")
+
+fimalgoritmo
