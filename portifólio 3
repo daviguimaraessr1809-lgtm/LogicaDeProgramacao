@@ -1,0 +1,19 @@
+programa
+{
+    inclua biblioteca Util --> u
+    inclua biblioteca Calendario --> t
+    funcao inicio()
+    {
+     inteiro numero
+
+     
+        numero = u.sorteia(1, 100)
+
+       escreva("escreva 5 segundos")
+       u.aguarde(5000)
+
+        escreva("Número sorteado: ", numero, "\n")
+        escreva("horario da exibição", t.dia_mes_atual())
+      
+    }
+}
