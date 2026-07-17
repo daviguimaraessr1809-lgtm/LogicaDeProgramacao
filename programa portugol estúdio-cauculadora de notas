@@ -1,0 +1,67 @@
+programa
+{
+    inclua biblioteca Util
+    inclua biblioteca Texto
+    inclua biblioteca Matematica
+
+    funcao inicio()
+    {
+        real nota1, nota2, nota3, media
+        cadeia nome, resposta
+        inteiro opcao
+
+        resposta = "S"
+
+        enquanto (Texto.caixa_alta(resposta) == "S")
+        {
+            escreva("\n=====================================\n")
+            escreva("      CALCULADORA DE NOTAS\n")
+            escreva("=====================================\n")
+
+            escreva("Digite o nome do aluno: ")
+            leia(nome)
+
+            escreva("Digite a primeira nota: ")
+            leia(nota1)
+
+            escreva("Digite a segunda nota: ")
+            leia(nota2)
+
+            escreva("Digite a terceira nota: ")
+            leia(nota3)
+
+            media = (nota1 + nota2 + nota3) / 3
+            media = Matematica.arredondar(media, 2)
+
+            escreva("\nAluno: ", nome, "\n")
+            escreva("Média: ", media, "\n")
+
+            se (media >= 7)
+            {
+                escreva("Situação: APROVADO!\n")
+            }
+            senao
+            {
+                se (media >= 5)
+                {
+                    escreva("Situação: RECUPERAÇÃO!\n")
+                }
+                senao
+                {
+                    escreva("Situação: REPROVADO!\n")
+                }
+            }
+
+            escreva("\nDeseja calcular outra média?\n")
+            escreva("S - Sim\n")
+            escreva("N - Não\n")
+            leia(resposta)
+
+            resposta = Texto.caixa_alta(resposta)
+
+            Util.aguarde(1000)
+        }
+
+        escreva("\nObrigado por utilizar a Calculadora de Notas!\n")
+    }
+}
