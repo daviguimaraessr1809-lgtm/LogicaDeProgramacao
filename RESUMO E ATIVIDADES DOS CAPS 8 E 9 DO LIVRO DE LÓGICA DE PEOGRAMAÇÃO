@@ -1,0 +1,232 @@
+RESUMO
+cap 8:
+Estrutura de Seleção Simples
+.Executa um bloco de comandos somente se uma condição for verdadeira, se a condição for falsa, o programa apenas continua a execução.
+
+Estrutura de seleção composta
+.Permite escolher entre dois caminhos. Se a condição for verdadeira, executa um bloco, Caso contrário, executa outro.
+
+Estrutura de seleção encadeada
+.É usada quando existem várias condições diferentes. O algoritmo testa uma condição após outra até encontrar uma verdadeira.
+
+Estrutura de seleção de múltipla escolha
+.É utilizada quando uma variável pode assumir vários valores específicos. Em vez de vários "Se... Senão", utiliza-se Escolha/Caso (Switch Case).
+
+
+Cap 9:
+Estrutura de Repetição Enquanto...Faça
+.A estrutura Enquanto...Faça executa um bloco de comandos enquanto uma condição for verdadeira. A condição é verificada antes da execução do bloco.
+
+Estrutura de Repetição Repita...Até 
+.A estrutura Repita...Até executa os comandos primeiro e só depois verifica a condição. Isso garante que o bloco seja executado pelo menos uma vez.
+
+Estrutura de Repetição Para...Faça
+.A estrutura Para...Faça é usada quando já se sabe quantas vezes o bloco será executado. Ela controla automaticamente uma variável chamada contador.
+
+
+ATIVIDADES DO CAPÍTULO 8:
+1.A
+
+2.não consegui fazer
+
+3.A estrutura de seleção simples é utilizada quando uma ação deve ser executada apenas se uma condição for verdadeira. Caso a condição seja falsa, o algoritmo simplesmente continua sua execução, sem realizar nenhuma ação alternativa. Pseudocódigo:
+Se (condição) então
+    comandos
+FimSe
+
+Diagrama de blocos:
+          ┌──────────────┐
+          │   Condição?  │
+          └──────┬───────┘
+                 │
+          Sim ───┘
+                 │
+          ┌──────────────┐
+          │   Comandos   │
+          └──────┬───────┘
+                 │
+             Continua
+
+4.A estrutura de seleção composta é utilizada quando existem duas possibilidades: uma para quando a condição é verdadeira e outra para quando ela é falsa.
+
+Pseudocódigo
+Se (condição) então
+    comandos
+Senão
+    comandos
+FimSe
+Diagrama de blocos
+              ┌──────────────┐
+              │   Condição?  │
+              └───┬─────┬────┘
+                  │     │
+                Sim    Não
+                  │     │
+        ┌─────────┘     └─────────┐
+        │                         │
+┌──────────────┐         ┌──────────────┐
+│   Comandos   │         │   Comandos   │
+└──────┬───────┘         └──────┬───────┘
+       └────────────┬───────────┘
+                    │
+                Continua
+
+5.A estrutura de seleção encadeada é utilizada quando existem três ou mais possibilidades, sendo necessário testar várias condições em sequência até encontrar uma verdadeira.
+
+Pseudocódigo
+Se (condição1) então
+    comandos
+Senão Se (condição2) então
+    comandos
+Senão Se (condição3) então
+    comandos
+Senão
+    comandos
+FimSe
+Diagrama de blocos
+          ┌──────────────┐
+          │ Condição 1?  │
+          └───┬─────┬────┘
+              │     │
+            Sim    Não
+              │     │
+      ┌───────┘     ▼
+┌──────────────┐ ┌──────────────┐
+│  Comandos 1  │ │ Condição 2?  │
+└──────┬───────┘ └───┬─────┬────┘
+       │             │     │
+       │           Sim    Não
+       │             │     ▼
+       │     ┌──────────────┐
+       │     │ Comandos 2   │
+       │     └──────┬───────┘
+       │            │
+       │            ▼
+       │      ┌──────────────┐
+       │      │ Comandos do  │
+       │      │   Senão      │
+       └────────────┬─────────┘
+                    │
+                Continua
+
+
+6. Pseudocódigo
+Escolha (opção)
+
+Caso 1
+    comandos
+
+Caso 2
+    comandos
+
+Caso 3
+    comandos
+
+Caso Contrário
+    comandos
+
+FimEscolha
+Diagrama de blocos
+              ┌──────────────┐
+              │    Opção     │
+              └──────┬───────┘
+                     │
+        ┌────────────┼────────────┐
+        │            │            │
+      Caso 1      Caso 2      Caso 3
+        │            │            │
+ ┌────────────┐ ┌────────────┐ ┌────────────┐
+ │ Comandos   │ │ Comandos   │ │ Comandos   │
+ └─────┬──────┘ └─────┬──────┘ └─────┬──────┘
+       └──────────────┼──────────────┘
+                      │
+            Caso Contrário
+                      │
+             ┌────────────┐
+             │ Comandos   │
+             └─────┬──────┘
+                   │
+               Continua
+
+
+07. – Algoritmo
+Pseudocódigo
+Algoritmo "PesoIdeal"
+
+Var
+    altura, peso, pesoIdeal : real
+    sexo : caractere
+
+Inicio
+
+    Escreva("Digite a altura: ")
+    Leia(altura)
+
+    Escreva("Digite o peso: ")
+    Leia(peso)
+
+    Escreva("Digite o sexo (M/F): ")
+    Leia(sexo)
+
+    Se (sexo = "M") então
+        pesoIdeal <- (72.7 * altura) - 62
+    Senão
+        pesoIdeal <- (62.1 * altura) - 48.7
+    FimSe
+
+    Escreva("Peso ideal: ", pesoIdeal)
+
+    Se (peso > pesoIdeal + 10) então
+        Escreva("ALERTA: Peso mais de 10 kg acima do peso ideal!")
+    FimSe
+
+FimAlgoritmo
+Funcionamento do algoritmo
+Lê a altura, o peso e o sexo da pessoa.
+
+Calcula o peso ideal:
+
+Homem: (72,7 × altura) − 62
+
+Mulher: (62,1 × altura) − 48,7
+
+Exibe o peso ideal.
+
+Se o peso informado for mais de 10 kg acima do peso ideal, exibe uma mensagem de alerta.
+
+
+ATIVIDADES DO CAPÍTULO 9:
+ 
+
+1.Verdadeiro
+ Falso
+ Verdadeiro
+ Falso
+ Verdadeiro
+ Verdadeiro
+ Falso
+ Verdadeiro
+ Falso
+ Verdadeiro
+
+2.D
+
+4. F
+V
+F
+F
+V
+
+6.C
+7.A
+
+
+
+
+
+
+
+
+
+
+
